@@ -1,0 +1,18 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: space-center;
+    align-self: flex-start;
+    align-content: flex-start;
+    gap: 1rem;
+    margin-left: 2rem;
+}
+
+.container h1{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 3.2rem;
+    margin-left: 2rem;
+}

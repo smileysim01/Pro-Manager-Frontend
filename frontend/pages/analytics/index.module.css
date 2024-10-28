@@ -1,0 +1,91 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: space-center;
+    align-self: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    overflow-x: hidden;
+}
+
+.container h1{
+    display: flex;
+    flex-direction: column;
+    height: 3.2rem;
+    margin-left: 2rem;
+}
+.analytics{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+    align-items: space-between;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    background-color: #F9FCFF;
+    width: 25rem;
+    padding: 2rem;
+    border-radius: 12px;
+}
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+    background-color: #F9FCFF;
+    margin-left: 2rem;
+    width: 25rem;
+    padding: 2rem;
+    border-radius: 12px;
+}
+.analyticsItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    object-fit: contain;
+}
+.itemName{
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+}
+.itemValue{
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    font-weight: 600;
+    margin-left: auto;
+    flex-grow: 1;
+}
+.analyticsItem img{
+    height: 3rem;
+    width: auto;
+    object-fit: contain;
+    padding: 1rem;
+}
+
+#mobileContainer{
+    margin-left: 0;
+}
+
+#mobileAnalytics{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#mobileLeftColumn{
+    width: 100%;
+}
+#mobileRightColumn{
+    width: 100%;
+    margin-top: 2rem;
+    margin-left: 0;
+}
+

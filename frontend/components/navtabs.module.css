@@ -1,0 +1,28 @@
+.container {
+    margin-top: 1rem;
+    position: -webkit-sticky;
+    font-size: 1.5rem;
+}
+
+.tab {
+    display: inline-block;
+    color: #707070;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin: auto;
+}
+
+.tab img {
+    margin: 2rem;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.tab.active {
+    background-color: rgb(67,145,237,10%);
+    color: black;
+}
+.tab:hover{
+    cursor:pointer;
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1)
+}

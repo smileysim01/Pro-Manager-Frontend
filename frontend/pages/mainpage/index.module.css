@@ -1,0 +1,61 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+.left{
+    width: 25%;
+    min-width: 200px;
+    display: inline-block;
+    border-right: 1.5px solid #EDF5FE;
+    font-family: "Poppins", sans-serif;
+}
+#header{
+    display: inline-block;
+    position: sticky;
+    z-index: 1;
+    font-size: 2rem;
+}
+#header img{
+    height: 100%;
+    margin: 2rem;
+    vertical-align: middle;
+}
+.logout{
+    display: inline-block;
+    position: absolute;
+    bottom: 2rem;
+    z-index: 1;
+    font-size: 1.5rem;
+    color: #CF3636;
+}
+.logout img{
+    height: 100%;
+    margin: 2rem;
+    vertical-align: middle;
+}
+.logout:hover{
+    cursor: pointer;
+    color:#9e1e1e
+}
+#mobileContainer{
+    width: 100vw;
+}
+.right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.mobileContainerContent{
+    width: 100vw;
+}
+.backButton{
+    width: 2rem;
+    margin: 10px;
+    cursor: pointer;
+    margin: 1rem;
+}
