@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    align-self: flex-start;
+    align-content: center;
+    background-color: rgb(67,145,237,10%);
+    width: 30%;
+    border-radius: 10px;
+    flex-shrink: 0;
+    overflow-y: auto;
+}
+
+#onPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48,61,67,0.55); /* 75% opacity */
+    z-index: 999;
+}
+
+h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+h4 img {
+    height: 1rem;
+    cursor: pointer;
+}
+.topBtns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.topBtns #addBtn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.topBtns img {
+    height: 1.5rem;
+}
+

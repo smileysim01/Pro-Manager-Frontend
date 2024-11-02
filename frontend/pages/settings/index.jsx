@@ -1,9 +1,9 @@
 import styles from './index.module.css'
-import {Link, useNavigate} from 'react-router-dom'
-import {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
+import {useEffect, useState} from 'react'
 import {toast} from 'react-toastify'
 import Form from '../../components/form'
-import { settings } from '../../services/auth'
+import { settings, getAccount } from '../../services/auth'
 import name from '../../src/assets/name.png'
 import email from '../../src/assets/email.png'
 import password from '../../src/assets/password.png'
@@ -26,6 +26,17 @@ function Settings() {
     localStorage.removeItem("name");
     navigate("/login");
   }
+  const [isLoading, setIsLoading] = useState(true);
+  const loadUserData = async () => {
+    await getAccount().then((res) => {
+    setFormData(res.data);
+    setIsLoading(false);
+    });
+  }
+  useEffect(() => {
+    loadUserData();
+  },[])
+
   const onSubmit = async (e) => {
     e.preventDefault()
     try {
@@ -34,7 +45,7 @@ function Settings() {
         localStorage.removeItem("token")
         localStorage.removeItem("name")
         toast.success(response.message)
-        logoutFunc();
+        response.logout ? logoutFunc() : null;
       } else if (response.status === 200) {
         toast.error(response.message)
       }
@@ -119,7 +130,8 @@ function Settings() {
   return (
     <div className={styles.container} div={styles.mobileContainer}>
         <h1>Settings</h1>
-        <Form formFields={formFields} onSubmit={onSubmit} error={errors} errorMessages={errorMessages} submitButtonText="Update" />
+        {isLoading ? <p>Loading...</p> : 
+        <Form formFields={formFields} onSubmit={onSubmit} error={errors} errorMessages={errorMessages} submitButtonText="Update" />}
     </div>
   )
 }

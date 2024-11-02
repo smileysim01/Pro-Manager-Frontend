@@ -8,7 +8,7 @@
     position: relative;
 }
 .left{
-    width: 25%;
+    width: 20%;
     min-width: 200px;
     display: inline-block;
     border-right: 1.5px solid #EDF5FE;
@@ -18,11 +18,11 @@
     display: inline-block;
     position: sticky;
     z-index: 1;
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 #header img{
     height: 100%;
-    margin: 2rem;
+    margin: 1.2rem;
     vertical-align: middle;
 }
 .logout{
@@ -30,7 +30,7 @@
     position: absolute;
     bottom: 2rem;
     z-index: 1;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #CF3636;
 }
 .logout img{
@@ -58,4 +58,53 @@
     margin: 10px;
     cursor: pointer;
     margin: 1rem;
+}
+#onPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48,61,67,0.55); /* 75% opacity */
+    z-index: 999;
+}
+.logoutPopup {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 30vw;
+    height: 200px;
+    border-radius: 12px;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.popupHeader {
+    font-weight: 600;
+    font-size: 1rem;
+}
+.logoutPopup .popupButtonLogout {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: var(--theme-color);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.logoutPopup .popupButtonCancel {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    color: #CF3636;
+    border-color: #CF3636;
+    border-radius: 12px;
+    border-width: 0.2rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
 }

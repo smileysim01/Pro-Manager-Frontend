@@ -6,13 +6,14 @@ import {toast} from 'react-toastify'
 
 function Analytics() {
   const [analyticsData, setAnalyticsData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await analytics()
         setAnalyticsData(response.analytics)
+        setIsLoading(false);
       } catch (error) {
-        console.log(error)
         error?.message ? toast.error(error.message) : toast.error("An unexpected error occured. Please try again.")
       }
     }
@@ -38,7 +39,7 @@ function Analytics() {
       {analyticsData ? (
         <div className={styles.analytics} id={width > 720 ? styles.desktopAnalytics : styles.mobileAnalytics}>
           <div className={styles.leftColumn} id={width > 720 ? styles.desktopLeftColumn : styles.mobileLeftColumn}>
-            {leftEntries.map(([key,value]) => (
+            {isLoading ? <p>Loading...</p> : leftEntries.map(([key,value]) => (
               <div key={key} className={styles.analyticsItem}>
                 <span className={styles.itemName}><img src={point} alt="point"/>{key}</span>
                 <span className={styles.itemValue}>{value}</span>
@@ -46,7 +47,7 @@ function Analytics() {
             ))}
           </div>
           <div className={styles.rightColumn} id={width > 720 ? styles.desktopRightColumn : styles.mobileRightColumn}>
-            {rightEntries.map(([key,value]) => (
+            {isLoading ? <p>Loading...</p> : rightEntries.map(([key,value]) => (
               <div key={key} className={styles.analyticsItem}>
                 <span className={styles.itemName}><img src={point} alt="point"/>{key}</span>
                 <span className={styles.itemValue}>{value}</span>
@@ -55,7 +56,7 @@ function Analytics() {
           </div>
         </div>
       ) : (
-        <p>Could not fetch analytics data. Try logging in again.</p>
+        <>{isLoading ? <p>Loading...</p> : <p>Could not fetch analytics data. Try logging in again.</p>}</>
       )}
     </div>
   )

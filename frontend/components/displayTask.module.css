@@ -1,0 +1,115 @@
+.container {
+    display: inline-block;
+    flex-direction: column;
+    padding: 0.5rem;
+    border-radius: 12px;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+.priority {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+.priorityLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.icon {
+    display: inline-block;
+    border-radius: 50%;
+    border-color: black;
+    border-width: 10px;
+    width: 0.8rem;
+    height: 0.8rem;
+
+}
+.LOW {
+    background-color: #63C05B;
+}
+.MODERATE {
+    background-color: #18B0FF;
+}
+.HIGH {
+    background-color: #FF2473;
+}
+.options {
+    display: inline-block;
+    font-size: 1.2rem;
+    vertical-align: text-top;
+    cursor: pointer;
+}
+.title {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+.checkList {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.2rem;
+}
+.checkListLabel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+.checkListLabel img {
+    height: 1rem;
+    cursor: pointer;
+}
+.subTask {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: #E2E2E2 1px solid;
+    border-radius: 12px;
+}
+.subTaskLabel input[type="checkbox"] {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    accent-color: #17A2B8;
+}
+.subTaskLabel input[type="checkbox"]:disabled:checked {
+    background-color: #17A2B8;
+}
+.subTask img {
+    height: 1rem;
+    cursor: pointer;
+}
+.bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+.dueDate {
+    display: inline-block;
+    background-color: #CF3636;
+    color: white;
+    padding: 0.2rem;
+    border-radius: 8px;
+    margin: 0.2rem;
+}
+.listTypeLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.list {
+    background-color: #EEECEC;
+    color: #767575;
+    border-radius: 8px;
+    padding: 0.2rem;
+}
