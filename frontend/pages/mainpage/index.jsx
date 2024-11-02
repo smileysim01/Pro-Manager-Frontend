@@ -22,6 +22,7 @@ function MainPage() {
     const [width, setWidth] = useState(window.innerWidth);
     // checking device size to make it responsive
     useEffect(() => {
+      localStorage.getItem("token") ? null : navigate("/login");
       const handleResize = () => setWidth(window.innerWidth);
       window.addEventListener("resize", handleResize);
       return () => window.removeEventListener("resize", handleResize);
