@@ -23,7 +23,7 @@ export const addTask = async (data) => {
     const URL = import.meta.env.VITE_API_URL;
     const headers = addTokenToHeader({ headers: {'Content-Type': 'application/x-www-form-urlencoded'} });
     try {
-        const response = await axios.post(`${URL}/Pro-Manager/api/v1/task`, data, {headers});
+        const response = await axios.post(`${URL}/Pro-Manager/api/v1/board/task`, data, {headers});
         return {
             status: response ? response.status : 200,
             message: response.data.message ? response.data.message : "Task added.",

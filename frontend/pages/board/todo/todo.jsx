@@ -6,6 +6,7 @@ import { todo } from '../../../services/task';
 import { toast } from 'react-toastify';
 import DisplayTask from '../../../components/displayTask';
 import collapseImg from '../../../src/assets/collapse.png';
+import AddTaskForm from '../../../components/addTaskForm';
 
 function Todo() {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -43,7 +44,8 @@ function Todo() {
           <img src={collapseImg} alt="collapse" onClick={handleCollapse}/>
         </div>
         <Popup open={isPopupOpen} onClose={() => setIsPopupOpen(false)}>
-            <AddTask setIsPopupOpen={setIsPopupOpen} width={width}/>
+          {/* <AddTaskForm /> */}
+          <AddTask setIsPopupOpen={setIsPopupOpen} width={width}/>
         </Popup>
         {isPopupOpen && <div id={styles.onPopup}></div>}
       </h4>

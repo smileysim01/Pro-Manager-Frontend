@@ -1,0 +1,185 @@
+.container {
+    display: inline;
+    font-size: 1rem;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    scrollbar-width: thin;
+}
+.formField{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 3.2rem;
+    margin: 1rem;
+}
+.inputContainer {
+    width: inherit;
+    position: relative;
+    margin: inherit;
+}
+.titleGroup {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+.required {
+    color: #FF0000;
+}
+.container input {
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.priorityGroup {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    .icon {
+        display: inline-block;
+        border-radius: 50%;
+        width: 0.6rem;
+        height: 0.6rem;
+    }
+    .LOW {
+        background-color: #63C05B;
+    }
+    .MODERATE {
+        background-color: #18B0FF;
+    }
+    .HIGH {
+        background-color: #FF2473;
+    }
+    .priorityGroup label {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .radioButton , .radioButtonSelected {
+        display: inline-block;
+        vertical-align: middle;
+        border: 2px solid #E2E2E2;
+        border-radius: 5px ;
+        cursor: pointer;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    .radioButton:hover {
+        background-color: #E2E2E2; 
+        color: white;
+    }
+    .radioInput {
+        display: none;
+    }
+    .radioButtonSelected {
+        background-color: #E2E2E2;
+    }
+}
+.assignToGroup {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.checkListGroup {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 1rem;
+    width: 100%;
+    max-height: 100px;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.scrollable{
+    width: 100%;
+    overflow-y: auto; /* Enable vertical scrolling within the checklist area */
+    padding-right: 0.5rem;
+    scrollbar-width: thin;
+    margin-bottom: 2rem;
+}
+
+.addButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #767575;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.checklistItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #E2E2E2;
+    border-radius: 12px;
+    width: 100%;
+    height: fit-content;
+}
+.checklistItem input[type="checkbox"] {
+    accent-color: #17A2B8;
+    cursor: pointer;
+}
+.checklistItem input[type="text"] { 
+    border: none;
+    outline: none;
+    cursor: text;
+    flex-grow: 1;
+}
+.checklistItem img {
+    height: 1rem;
+    cursor: pointer;
+}
+
+
+.formField .bottom {
+    display: inline-block;
+    gap: 0.5rem;
+    margin: auto;
+    width: fit-content;
+    /* position: relative; */
+    button {
+        background-color: white;
+        border: #E2E2E2 1px solid;
+        border-radius: 12px;
+        padding: 0.5rem;
+        cursor: pointer;
+        font-weight: 600;
+    }
+    .dueDate {
+        color: #707070;
+    }
+    #dueDateGroup {
+        
+        .calender {
+            display: none;
+        }
+    }
+    .cancelButton {
+        color: #CF3636;
+        border-color: #CF3636;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .submitButton {
+        background-color: var(--theme-color);
+        color: white;
+        border-color: var(--theme-color);
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+.error {
+    color: red !important;
+    font-size: 0.8rem !important;
+    position: absolute !important
+}

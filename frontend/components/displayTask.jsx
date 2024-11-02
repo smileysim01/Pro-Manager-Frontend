@@ -1,5 +1,4 @@
 import styles from './displayTask.module.css';
-import trash from '../src/assets/trash.png';
 import collapseTwoImg from '../src/assets/collapseTwo.png';
 import collapseThreeImg from '../src/assets/collapseThree.png';
 import { useState } from 'react';
@@ -49,7 +48,6 @@ function DisplayTask({task, listType, collapse}) {
                         <input type="checkbox" checked={subTask.done} disabled={false} onChange={()=>null}/> 
                         {subTask.subTask}
                     </div>
-                    {/* <img src={trash} alt="trash"/> */}
                 </div>
             ))}
       </> }
