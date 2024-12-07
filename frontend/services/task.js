@@ -1,8 +1,8 @@
 import axios from 'axios'
 import { addTokenToHeader } from '../utils/addToken'
 
+const URL = import.meta.env.VITE_API_URL;
 export const analytics = async () => {
-    const URL = import.meta.env.VITE_API_URL;
     const headers = addTokenToHeader({ headers: {'Content-Type': 'application/x-www-form-urlencoded'} });
     try {
         const response = await axios.get(`${URL}/Pro-Manager/api/v1/analytics`, {headers});
@@ -20,7 +20,6 @@ export const analytics = async () => {
 }
 
 export const addTask = async (data) => {
-    const URL = import.meta.env.VITE_API_URL;
     const headers = addTokenToHeader({ headers: {'Content-Type': 'application/x-www-form-urlencoded'} });
     try {
         const response = await axios.post(`${URL}/Pro-Manager/api/v1/board/task`, data, {headers});
@@ -38,7 +37,6 @@ export const addTask = async (data) => {
 }
 
 export const backlog = async () => {
-    const URL = import.meta.env.VITE_API_URL;
     const headers = addTokenToHeader({ headers: {'Content-Type': 'application/x-www-form-urlencoded'} });
     try {
         const response = await axios.get(`${URL}/Pro-Manager/api/v1/board/task/backlog`, {headers});
@@ -56,7 +54,6 @@ export const backlog = async () => {
 }
 
 export const todo = async () => {
-    const URL = import.meta.env.VITE_API_URL;
     const headers = addTokenToHeader({ headers: {'Content-Type': 'application/x-www-form-urlencoded'} });
     try {
         const response = await axios.get(`${URL}/Pro-Manager/api/v1/board/task/todo`, {headers});
@@ -74,7 +71,6 @@ export const todo = async () => {
 }
 
 export const inprogress = async () => {
-    const URL = import.meta.env.VITE_API_URL;
     const headers = addTokenToHeader({ headers: {'Content-Type': 'application/x-www-form-urlencoded'} });
     try {
         const response = await axios.get(`${URL}/Pro-Manager/api/v1/board/task/inprogress`, {headers});
@@ -92,7 +88,6 @@ export const inprogress = async () => {
 }
 
 export const done = async () => {
-    const URL = import.meta.env.VITE_API_URL;
     const headers = addTokenToHeader({ headers: {'Content-Type': 'application/x-www-form-urlencoded'} });
     try {
         const response = await axios.get(`${URL}/Pro-Manager/api/v1/board/task/done`, {headers});
